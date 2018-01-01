@@ -1,4 +1,6 @@
-﻿using BikeShop.Model;
+﻿using BikeShop.DAL;
+using BikeShop.Domain;
+using BikeShop.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -33,5 +35,34 @@ namespace BikeShop.Controllers
 
             return View();
         }
+
+        [HttpGet]
+        public ActionResult CreateProduct()
+        {
+            var model = new CreateProductVM
+            {
+                Product = new Product { Id = Guid.NewGuid() },
+                ProductCategories = db.ProductCategories.ToList().Select(p => new SelectListItem { Text = p.Name, Value = p.Id.ToString() })
+            };
+
+            return View(model);
+        }
+
+        [HttpPost]
+        public ActionResult CreateProduct(CreateProductVM product)
+        {
+            if (ModelState.IsValid)
+            {
+
+                db.Products.Add(product.Product);
+                db.SaveChanges();
+                return RedirectToAction("Index");
+            }
+
+            return View(product);
+        }
+
+
+
     }
 }

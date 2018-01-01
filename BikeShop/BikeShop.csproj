@@ -206,6 +206,7 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\HomeViewModels.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -240,7 +241,9 @@
     <Content Include="Web.Release.config">
       <DependentUpon>Web.config</DependentUpon>
     </Content>
-    <Content Include="Views\Web.config" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
     <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
@@ -267,6 +270,7 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Home\CreateProduct.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -285,9 +289,13 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\BikeShop.Model\BikeShop.Model.csproj">
+    <ProjectReference Include="..\BikeShop.Domain\BikeShop.Domain.csproj">
+      <Project>{f51200c6-0f2f-42f5-9089-2ac292a24abe}</Project>
+      <Name>BikeShop.Domain</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BikeShop.Model\BikeShop.DAL.csproj">
       <Project>{317ecd5f-5fc0-4618-86a2-491a8e4b77c6}</Project>
-      <Name>BikeShop.Model</Name>
+      <Name>BikeShop.DAL</Name>
     </ProjectReference>
   </ItemGroup>
   <PropertyGroup>

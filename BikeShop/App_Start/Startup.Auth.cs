@@ -6,7 +6,7 @@ using Microsoft.Owin.Security.Cookies;
 using Microsoft.Owin.Security.Google;
 using Owin;
 using BikeShop.Models;
-using BikeShop.Model;
+using BikeShop.DAL;
 
 namespace BikeShop
 {

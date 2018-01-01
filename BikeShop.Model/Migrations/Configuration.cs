@@ -1,18 +1,20 @@
-namespace BikeShop.Model.Migrations
+namespace BikeShop.DAL.Migrations
 {
+    using BikeShop.Domain;
     using System;
+    using System.Collections.Generic;
     using System.Data.Entity;
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<BikeShop.Model.BikeShopDb>
+    internal sealed class Configuration : DbMigrationsConfiguration<BikeShopDb>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = true;
         }
 
-        protected override void Seed(BikeShop.Model.BikeShopDb context)
+        protected override void Seed(BikeShopDb context)
         {
             //  This method will be called after migrating to the latest version.
 
@@ -30,9 +32,12 @@ namespace BikeShop.Model.Migrations
                 {
 
                     Name = "Road bikes"
-                }
+                },
+
+                Attributes = new List<ProductAttributes> { new ProductAttributes { Color = "Blue" } }
 
             });
         }
+
     }
 }

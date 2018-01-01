@@ -11,7 +11,7 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin;
 using Microsoft.Owin.Security;
 using BikeShop.Models;
-using BikeShop.Model;
+using BikeShop.DAL;
 
 namespace BikeShop
 {

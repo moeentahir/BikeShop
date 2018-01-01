@@ -31,9 +31,13 @@
         <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+<div>
+    @Html.ActionLink("Create Bike", "CreateProduct")
+</div>
 <div class="row">
     @foreach (var product in Model)
     {
         <div>@product.Name</div>
+        <div>@product.Description</div>
     }
 </div>
