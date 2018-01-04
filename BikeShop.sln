@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2010
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeShop", "BikeShop\BikeShop.csproj", "{50555CFB-7870-449C-BF10-704050762B6E}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeShop.Website", "BikeShop\BikeShop.Website.csproj", "{50555CFB-7870-449C-BF10-704050762B6E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BikeShop.Tests", "BikeShop.Tests\BikeShop.Tests.csproj", "{1D089555-274B-452A-9E55-A9C1104305E1}"
 EndProject

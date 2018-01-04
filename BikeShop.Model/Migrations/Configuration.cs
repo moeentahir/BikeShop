@@ -24,10 +24,10 @@ namespace BikeShop.DAL.Migrations
             context.Products.AddOrUpdate(p => p.Name, new Product
             {
                 Name = "Cervelo R3",
-                Category = new ProductCategory
+                Categories = new[]{ new ProductCategory
                 {
                     Name = "Bikes"
-                },
+                } },
                 SubCategory = new ProductSubCategory
                 {
 

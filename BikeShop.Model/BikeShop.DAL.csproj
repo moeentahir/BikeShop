@@ -54,7 +54,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BikeShopDb.cs" />
-    <Compile Include="Identity\IdentityModels.cs" />
+    <Compile Include="Configurations\CustomerTypeConfigurations.cs" />
+    <Compile Include="Configurations\ProductTypeConfigurations.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -64,9 +65,7 @@
     </None>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Services\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <ProjectReference Include="..\BikeShop.Common\BikeShop.Common.csproj">
       <Project>{665a8f73-8555-49c0-ac89-caa8ff477ab8}</Project>

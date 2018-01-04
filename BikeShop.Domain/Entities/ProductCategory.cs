@@ -8,8 +8,12 @@ namespace BikeShop.Domain
 {
     public class ProductCategory : GuidEntity
     {
+        public ProductCategory()
+        {
+            Products = new HashSet<Product>();
+        }
         public string Name { get; set; }
 
-        public virtual IEnumerable<Product> Products { get; set; }
+        public virtual ICollection<Product> Products { get; set; }
     }
 }
