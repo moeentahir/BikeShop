@@ -48,127 +48,85 @@ namespace ASP
             
             #line default
             #line hidden
-WriteLiteral("\r\n\r\n<div");
+WriteLiteral("\r\n<main");
 
-WriteLiteral(" class=\"jumbotron\"");
+WriteLiteral(" class=\"container\"");
 
-WriteLiteral(">\r\n    <h1>ASP.NET</h1>\r\n    <p");
-
-WriteLiteral(" class=\"lead\"");
-
-WriteLiteral(">ASP.NET is a free web framework for building great Web sites and Web application" +
-"s using HTML, CSS and JavaScript.</p>\r\n    <p><a");
-
-WriteLiteral(" href=\"https://asp.net\"");
-
-WriteLiteral(" class=\"btn btn-primary btn-lg\"");
-
-WriteLiteral(">Learn more &raquo;</a></p>\r\n    Moeen\r\n</div>\r\n\r\n<div");
-
-WriteLiteral(" class=\"row\"");
+WriteLiteral(" ng-app=\"productsViewer\"");
 
 WriteLiteral(">\r\n    <div");
 
-WriteLiteral(" class=\"col-md-4\"");
+WriteLiteral(" ng-controller=\"mainProductsController\"");
 
-WriteLiteral(@">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a");
+WriteLiteral(">\r\n        <div>\r\n");
 
-WriteLiteral(" class=\"btn btn-default\"");
-
-WriteLiteral(" href=\"https://go.microsoft.com/fwlink/?LinkId=301865\"");
-
-WriteLiteral(">Learn more &raquo;</a></p>\r\n    </div>\r\n    <div");
-
-WriteLiteral(" class=\"col-md-4\"");
-
-WriteLiteral(">\r\n        <h2>Get more libraries</h2>\r\n        <p>NuGet is a free Visual Studio " +
-"extension that makes it easy to add, remove, and update libraries and tools in V" +
-"isual Studio projects.</p>\r\n        <p><a");
-
-WriteLiteral(" class=\"btn btn-default\"");
-
-WriteLiteral(" href=\"https://go.microsoft.com/fwlink/?LinkId=301866\"");
-
-WriteLiteral(">Learn more &raquo;</a></p>\r\n    </div>\r\n    <div");
-
-WriteLiteral(" class=\"col-md-4\"");
-
-WriteLiteral(">\r\n        <h2>Web Hosting</h2>\r\n        <p>You can easily find a web hosting com" +
-"pany that offers the right mix of features and price for your applications.</p>\r" +
-"\n        <p><a");
-
-WriteLiteral(" class=\"btn btn-default\"");
-
-WriteLiteral(" href=\"https://go.microsoft.com/fwlink/?LinkId=301867\"");
-
-WriteLiteral(">Learn more &raquo;</a></p>\r\n    </div>\r\n</div>\r\n<div>\r\n");
-
-WriteLiteral("    ");
+WriteLiteral("            ");
 
             
-            #line 36 "..\..\Views\Home\Index.cshtml"
-Write(Html.ActionLink("Create Bike", "CreateProduct"));
+            #line 9 "..\..\Views\Home\Index.cshtml"
+       Write(Html.ActionLink("Create Bike", "CreateProduct"));
 
             
             #line default
             #line hidden
-WriteLiteral("\r\n</div>\r\n<div");
+WriteLiteral("\r\n        </div>\r\n        {{searchTerm}}\r\n        <form");
 
-WriteLiteral(" class=\"row\"");
+WriteLiteral(" name=\"searchUser\"");
 
-WriteLiteral(">\r\n");
+WriteLiteral(" ng-click=\"searchButtonClicked()\"");
 
-            
-            #line 39 "..\..\Views\Home\Index.cshtml"
-    
-            
-            #line default
-            #line hidden
-            
-            #line 39 "..\..\Views\Home\Index.cshtml"
-     foreach (var product in Model)
-    {
+WriteLiteral(">\r\n            <div");
 
-            
-            #line default
-            #line hidden
-WriteLiteral("        <div>");
+WriteLiteral(" class=\"form-group\"");
 
-            
-            #line 41 "..\..\Views\Home\Index.cshtml"
-        Write(product.Name);
+WriteLiteral(">\r\n                <label>Search</label>\r\n                <input");
 
-            
-            #line default
-            #line hidden
-WriteLiteral("</div>\r\n");
+WriteLiteral(" type=\"text\"");
 
-WriteLiteral("        <div>");
+WriteLiteral(" required");
 
-            
-            #line 42 "..\..\Views\Home\Index.cshtml"
-        Write(product.Description);
+WriteLiteral(" id=\"txtSearch\"");
 
-            
-            #line default
-            #line hidden
-WriteLiteral("</div>\r\n");
+WriteLiteral(" placeholder=\"Search...\"");
 
-            
-            #line 43 "..\..\Views\Home\Index.cshtml"
-    }
+WriteLiteral(" ng-model=\"searchTerm\"");
 
-            
-            #line default
-            #line hidden
-WriteLiteral("</div>");
+WriteLiteral(" />\r\n            </div>\r\n            <input");
+
+WriteLiteral(" type=\"submit\"");
+
+WriteLiteral(" class=\"btn btn-primary\"");
+
+WriteLiteral("  value=\"Search\"");
+
+WriteLiteral("/> \r\n        </form>\r\n        <div>\r\n            <div");
+
+WriteLiteral(" ng-repeat=\"product in products\"");
+
+WriteLiteral("> {{product}} </div>\r\n        </div>\r\n        <div");
+
+WriteLiteral(" class=\"has-error\"");
+
+WriteLiteral(">{{error}}</div>\r\n    </div>\r\n</main>\r\n\r\n");
+
+DefineSection("scripts", () => {
+
+WriteLiteral("\r\n    <script");
+
+WriteLiteral(" type=\"text/javascript\"");
+
+WriteLiteral(" src=\"https://code.angularjs.org/1.6.8/angular.js\"");
+
+WriteLiteral("></script>\r\n    <script");
+
+WriteAttribute("src", Tuple.Create(" src=\"", 956), Tuple.Create("\"", 993)
+, Tuple.Create(Tuple.Create("", 962), Tuple.Create<System.Object, System.Int32>(Href("~/App/MainProductsController.js")
+, 962), false)
+);
+
+WriteLiteral("></script>\r\n");
+
+});
 
         }
     }

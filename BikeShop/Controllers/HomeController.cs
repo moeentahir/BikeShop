@@ -18,7 +18,7 @@ namespace BikeShop.Controllers
         }
         public ActionResult Index()
         {
-
+            db.SaveChanges();
             return View(db.Products);
         }
 

@@ -20,7 +20,7 @@ namespace BikeShop.Domain
 
         public virtual ICollection<ProductCategory> Categories { get; set; }
 
-        public ProductSubCategory SubCategory { get; set; }
+        public virtual ProductSubCategory SubCategory { get; set; }
 
         public IEnumerable<ProductAttributes> Attributes { get; set; }
     }

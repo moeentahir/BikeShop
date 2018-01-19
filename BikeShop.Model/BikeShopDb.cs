@@ -47,6 +47,8 @@ namespace BikeShop.DAL
 
         public DbSet<ProductCategory> ProductCategories { get; set; }
 
+        public DbSet<ProductSubCategory> ProductSubCategories { get; set; }
+
         public DbSet<ProductAttributes> ProductAttributes { get; set; }
 
         public DbSet<Customer> Customers { get; set; }
